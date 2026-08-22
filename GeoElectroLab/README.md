@@ -20,5 +20,6 @@ It supports inversion of high-density DC resistivity data acquired with the pseu
 
 ## Notes
 
+- **About the name DC2DInvPro:** GeoElectroLab was developed under the internal project name *DC2DInvPro*. The current release package was built from that codebase, so the name DC2DInvPro may still appear in the program window title, the executable's file properties, and the offline help file. This does not affect the software's functionality in any way — DC2DInvPro and GeoElectroLab refer to the same program.
 - Large binaries (`*.exe`, `*.dll`, `*.pdb`) are stored with [Git LFS](https://git-lfs.com/). Use `git lfs pull` after cloning, or download the ZIP archive from GitHub directly.
 - This is a beta release of GeoElectroLab.
