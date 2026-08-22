@@ -1,4 +1,4 @@
-# GeoElectroLab (DC2DInvPro)
+# GeoElectroLab
 
 GeoElectroLab is the 2D DC resistivity inversion software used in this study: *"A Comparative Study of Pseudo-dipole Arrays and Standard Arrays Based on The High-density DC Resistivity Method"*.
 
@@ -21,4 +21,4 @@ It supports inversion of high-density DC resistivity data acquired with the pseu
 ## Notes
 
 - Large binaries (`*.exe`, `*.dll`, `*.pdb`) are stored with [Git LFS](https://git-lfs.com/). Use `git lfs pull` after cloning, or download the ZIP archive from GitHub directly.
-- This is an internal beta release (内测版) of DC2DInvPro.
+- This is a beta release of GeoElectroLab.
