@@ -1,4 +1,4 @@
-Array_Configuration,N_Data_Points,Std_Wenner_Mean_Ohmm,PseudoDiode_Mean_Ohmm,Avg_Relative_Error_Percent,Max_Relative_Error_Percent,Min_Relative_Error_Percent
+Array_Configuration,N_Data_Points,Std_Wenner_Mean_Ohmm,PseudoDipole_Mean_Ohmm,Avg_Relative_Error_Percent,Max_Relative_Error_Percent,Min_Relative_Error_Percent
 WA_WA-T,2583,271.8954,271.8559,2.4873,117.0989,0.0008
 WB_WB-T,2583,234.8403,234.6176,3.1071,22.1211,0.0028
 WC_WC-T,2583,290.4229,290.2676,1.854,26.6442,0.002

@@ -1,4 +1,4 @@
-X_Coord_m,Z_Coord_m,Std_Wenner_Apparent_Resistivity_Ohmm,PseudoDiode_Apparent_Resistivity_Ohmm,Relative_Error
+X_Coord_m,Z_Coord_m,Std_Wenner_Apparent_Resistivity_Ohmm,PseudoDipole_Apparent_Resistivity_Ohmm,Relative_Error
 -153.75,-3.75,211.24,219.575,0.039457
 -151.25,-3.75,212.002,210.343,0.007825
 -148.75,-3.75,208.002,206.686,0.006327

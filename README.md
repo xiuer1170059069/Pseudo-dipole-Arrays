@@ -1,4 +1,4 @@
-# Pseudo-diode-Arrays
+# Pseudo-dipole-Arrays
 
 Data for the paper: *A Comparative Study of Pseudo-dipole Arrays and Standard Arrays Based on The High-density DC Resistivity Method*.
 

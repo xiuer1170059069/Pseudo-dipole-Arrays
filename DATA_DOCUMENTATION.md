@@ -1,11 +1,11 @@
 # Data Documentation
-## A Comparative Study of Pseudo-diode Arrays and Standard Arrays Based on High-density DC Resistivity Method
+## A Comparative Study of Pseudo-dipole Arrays and Standard Arrays Based on High-density DC Resistivity Method
 
 ---
 
 ## 1. Overview
 
-This dataset contains all numerical simulation and inversion results supporting the comparative study between **Standard Wenner Arrays (WA, WB, WC)** and their corresponding **Pseudo-diode (Transformed) Arrays (WA-T, WB-T, WC-T)** in high-density DC resistivity surveys. The data includes forward-modeled apparent resistivity measurements, DC inversion results, unstructured finite-element meshes, and accuracy analysis files.
+This dataset contains all numerical simulation and inversion results supporting the comparative study between **Standard Wenner Arrays (WA, WB, WC)** and their corresponding **Pseudo-dipole (Transformed) Arrays (WA-T, WB-T, WC-T)** in high-density DC resistivity surveys. The data includes forward-modeled apparent resistivity measurements, DC inversion results, unstructured finite-element meshes, and accuracy analysis files.
 
 The organized data is stored in `Organized_Data/` and contains **1,024 files** across 13 subdirectories.
 
@@ -63,7 +63,7 @@ Organized_Data/
 | `DC_Voltage_Distribution_Section.dat` | UTF-8 text, tab-separated | Electric potential (voltage) distribution along the pseudosection | 8 files |
 | `DC_Primary_Propagated_Section.dat` | UTF-8 text, tab-separated | Primary-propagated apparent resistivity section (accounts for propagation effects) | 11 files |
 | `DC_Temperature_Corrected_Section.dat` | UTF-8 text, tab-separated | Temperature-corrected apparent resistivity section | 6 files |
-| `DCSection_PriPro_Tra.dat` | UTF-8 text, tab-separated | Transformed (pseudo-diode) primary-propagated resistivity section | 4 files |
+| `DCSection_PriPro_Tra.dat` | UTF-8 text, tab-separated | Transformed (pseudo-dipole) primary-propagated resistivity section | 4 files |
 | `DC_Inversion_Log.dat` | UTF-8 text, tab-separated | Inversion convergence log: iteration, data points, objective function, RMS error, roughness | 11 files |
 | `Inverted_Model_XYZ.dat` | UTF-8 text, tab-separated | Inverted subsurface resistivity model (3D cell-by-cell resistivity values) | 11 files |
 | `GroundTruth_Model_XYZ.dat` | UTF-8 text, tab-separated | Synthetic ground-truth resistivity model (for validation) | 11 files |
@@ -369,34 +369,34 @@ Binary gridded data files compatible with **Surfer** (Golden Software) contour p
 
 ---
 
-### 4.7 Transformed Array Data (Pseudo-diode)
+### 4.7 Transformed Array Data (Pseudo-dipole)
 
 #### `DCSection_PriPro_Tra.dat`
-**Physical Meaning: Primary-Propagated Resistivity Section — Transformed (Pseudo-diode) Array**
+**Physical Meaning: Primary-Propagated Resistivity Section — Transformed (Pseudo-dipole) Array**
 
-This is the **pseudo-diode (transformed) counterpart** of the standard `DC_Primary_Propagated_Section.dat`. It contains the apparent resistivity pseudosection computed using the transformed electrode configuration (WA-T, WB-T, WC-T).
+This is the **pseudo-dipole (transformed) counterpart** of the standard `DC_Primary_Propagated_Section.dat`. It contains the apparent resistivity pseudosection computed using the transformed electrode configuration (WA-T, WB-T, WC-T).
 
 **File Format:**
 - UTF-8 text, tab-separated
 - Same column structure as `DC_Primary_Propagated_Section.dat`
 
-**Physical Significance:** This file enables direct comparison between standard Wenner and pseudo-diode array results. The pseudo-diode array uses fewer distinct electrode configurations to achieve the same subsurface coverage, potentially reducing survey time and equipment requirements while maintaining measurement quality.
+**Physical Significance:** This file enables direct comparison between standard Wenner and pseudo-dipole array results. The pseudo-dipole array uses fewer distinct electrode configurations to achieve the same subsurface coverage, potentially reducing survey time and equipment requirements while maintaining measurement quality.
 
 ---
 
 ### 4.8 Comparative Statistical Data (CSV)
 
 #### `WA_WA-T_Comparison.csv`, `WB_WB-T_Comparison.csv`, `WC_WC-T_Comparison.csv`
-**Physical Meaning: Standard Wenner vs. Pseudo-diode Array Comparison**
+**Physical Meaning: Standard Wenner vs. Pseudo-dipole Array Comparison**
 
-These files contain **point-by-point comparisons** between standard Wenner array measurements and their pseudo-diode (transformed) counterparts.
+These files contain **point-by-point comparisons** between standard Wenner array measurements and their pseudo-dipole (transformed) counterparts.
 
 **File Format:**
 - UTF-8 CSV
-- Columns: `X_Coord_m` | `Z_Coord_m` | `Std_Wenner_Apparent_Resistivity_Ohmm` | `PseudoDiode_Apparent_Resistivity_Ohmm` | `Relative_Error`
+- Columns: `X_Coord_m` | `Z_Coord_m` | `Std_Wenner_Apparent_Resistivity_Ohmm` | `PseudoDipole_Apparent_Resistivity_Ohmm` | `Relative_Error`
   - X, Z: Spatial coordinates
   - ρ_std: Standard Wenner apparent resistivity (Ohm-m)
-  - ρ_pseudo: Pseudo-diode apparent resistivity (Ohm-m)
+  - ρ_pseudo: Pseudo-dipole apparent resistivity (Ohm-m)
   - Relative_Error: |ρ_std − ρ_pseudo| / ρ_std
 
 **Physical Significance:** These are the primary datasets for quantitative comparison in the paper. Summary statistics:
@@ -424,7 +424,7 @@ Profile-specific comparisons at a depth parameter of 60 units, providing focused
 Aggregate statistics across all configurations, providing a bird's-eye quantitative comparison of array performance.
 
 **Columns:**
-`Array_Configuration` | `N_Data_Points` | `Std_Wenner_Mean_Ohmm` | `PseudoDiode_Mean_Ohmm` | `Avg_Relative_Error_Percent` | `Max_Relative_Error_Percent` | `Min_Relative_Error_Percent`
+`Array_Configuration` | `N_Data_Points` | `Std_Wenner_Mean_Ohmm` | `PseudoDipole_Mean_Ohmm` | `Avg_Relative_Error_Percent` | `Max_Relative_Error_Percent` | `Min_Relative_Error_Percent`
 
 ---
 
@@ -546,9 +546,9 @@ All translated figure files.
 | **WB** | Wenner Array B | Alternative Wenner configuration with different electrode spacing series |
 | **WC** | Wenner Array C | Alternative Wenner configuration with third spacing series |
 | **W2** | Wenner-2 | Wenner array with doubled fundamental spacing (2a), deeper investigation depth |
-| **WA-T** | Pseudo-diode Array WA-T | Transformed/translated version of WA using pseudo-diode electrode switching |
-| **WB-T** | Pseudo-diode Array WB-T | Transformed version of WB |
-| **WC-T** | Pseudo-diode Array WC-T | Transformed version of WC |
+| **WA-T** | Pseudo-dipole Array WA-T | Transformed/translated version of WA using pseudo-dipole electrode switching |
+| **WB-T** | Pseudo-dipole Array WB-T | Transformed version of WB |
+| **WC-T** | Pseudo-dipole Array WC-T | Transformed version of WC |
 | **-WithQC** | With Quality Control | Data filtered to remove measurement outliers before inversion |
 | **-NoQC** | Without Quality Control | All measurements retained, no filtering applied |
 | **2-Yuan** | Two-Layer Model | Synthetic two-layer ground-truth model for validation |
@@ -558,7 +558,7 @@ All translated figure files.
 
 ## 7. Key Physical Findings from the Data
 
-1. **Best Array Agreement**: WC vs. WC-T shows the lowest average relative error (1.85%), indicating the WC electrode spacing configuration is most compatible with the pseudo-diode transformation.
+1. **Best Array Agreement**: WC vs. WC-T shows the lowest average relative error (1.85%), indicating the WC electrode spacing configuration is most compatible with the pseudo-dipole transformation.
 
 2. **Temperature Correction Impact**: The `-T` variants incorporate temperature-dependent corrections, with WC-T showing the most stable performance (lowest error spread, max 26.64%).
 
@@ -584,4 +584,4 @@ All translated figure files.
 
 ---
 
-*Document prepared for: A Comparative Study of Pseudo-diode Arrays and Standard Arrays Based on High-density DC Resistivity Method*
+*Document prepared for: A Comparative Study of Pseudo-dipole Arrays and Standard Arrays Based on High-density DC Resistivity Method*
